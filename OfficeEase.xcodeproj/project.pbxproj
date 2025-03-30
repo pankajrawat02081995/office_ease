@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		CED7BB40B3C83454F2295F5E /* Pods_OfficeEase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6485C7CFFA59C50E51F01085 /* Pods_OfficeEase.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		32D4A1512D9932440093AB5A /* OfficeEase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OfficeEase.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6485C7CFFA59C50E51F01085 /* Pods_OfficeEase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OfficeEase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9893BAC69678935A54AED977 /* Pods-OfficeEase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfficeEase.debug.xcconfig"; path = "Target Support Files/Pods-OfficeEase/Pods-OfficeEase.debug.xcconfig"; sourceTree = "<group>"; };
+		CC827BC265C6BB62DB605B47 /* Pods-OfficeEase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfficeEase.release.xcconfig"; path = "Target Support Files/Pods-OfficeEase/Pods-OfficeEase.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CED7BB40B3C83454F2295F5E /* Pods_OfficeEase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +55,8 @@
 			children = (
 				32D4A1532D9932440093AB5A /* OfficeEase */,
 				32D4A1522D9932440093AB5A /* Products */,
+				5704E126FA31CE79D42A9DE2 /* Pods */,
+				BA0219E9A0D2D4C85B2119A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +68,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		5704E126FA31CE79D42A9DE2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9893BAC69678935A54AED977 /* Pods-OfficeEase.debug.xcconfig */,
+				CC827BC265C6BB62DB605B47 /* Pods-OfficeEase.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BA0219E9A0D2D4C85B2119A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6485C7CFFA59C50E51F01085 /* Pods_OfficeEase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -65,9 +92,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 32D4A1642D9932460093AB5A /* Build configuration list for PBXNativeTarget "OfficeEase" */;
 			buildPhases = (
+				9BC0848C63341B1B3C9A793E /* [CP] Check Pods Manifest.lock */,
 				32D4A14D2D9932440093AB5A /* Sources */,
 				32D4A14E2D9932440093AB5A /* Frameworks */,
 				32D4A14F2D9932440093AB5A /* Resources */,
+				E38BF9CE98C63A569539F29A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -77,8 +106,6 @@
 				32D4A1532D9932440093AB5A /* OfficeEase */,
 			);
 			name = OfficeEase;
-			packageProductDependencies = (
-			);
 			productName = OfficeEase;
 			productReference = 32D4A1512D9932440093AB5A /* OfficeEase.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +154,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9BC0848C63341B1B3C9A793E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OfficeEase-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E38BF9CE98C63A569539F29A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OfficeEase/Pods-OfficeEase-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OfficeEase/Pods-OfficeEase-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OfficeEase/Pods-OfficeEase-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		32D4A14D2D9932440093AB5A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +209,7 @@
 /* Begin XCBuildConfiguration section */
 		32D4A1652D9932460093AB5A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9893BAC69678935A54AED977 /* Pods-OfficeEase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -173,6 +243,7 @@
 		};
 		32D4A1662D9932460093AB5A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC827BC265C6BB62DB605B47 /* Pods-OfficeEase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -241,7 +312,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -304,7 +375,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
