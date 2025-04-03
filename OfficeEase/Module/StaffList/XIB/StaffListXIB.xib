@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="StaffListXIB" rowHeight="105" id="KGk-i7-Jjw" customClass="StaffListXIB" customModule="OfficeEase" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="449" height="105"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="449" height="105"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bcT-Rs-uWi">
+                        <rect key="frame" x="0.0" y="9" width="449" height="128"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userImg" translatesAutoresizingMaskIntoConstraints="NO" id="xqW-4n-Vb1" customClass="AnimatableImageView" customModule="IBAnimatable">
+                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="EdY-VV-6kF"/>
+                                    <constraint firstAttribute="height" constant="70" id="woo-zD-Kkd"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="35"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manoj ji" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckt-OS-hGr">
+                                <rect key="frame" x="80" y="10.000000000000002" width="65.333333333333314" height="21.666666666666671"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" name="AppTitleColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Office Boy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wA4-Hg-osf">
+                                <rect key="frame" x="80" y="36.666666666666664" width="88" height="22"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" name="ThemeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="ic_uncheck" translatesAutoresizingMaskIntoConstraints="NO" id="0IW-Ou-AoX">
+                                <rect key="frame" x="409" y="-12" width="20" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="dVh-To-gr7"/>
+                                    <constraint firstAttribute="height" constant="20" id="wDD-zN-emV"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wA4-Hg-osf" firstAttribute="leading" secondItem="ckt-OS-hGr" secondAttribute="leading" id="1qb-p7-6vB"/>
+                            <constraint firstAttribute="trailing" secondItem="0IW-Ou-AoX" secondAttribute="trailing" constant="20" id="7aK-la-ft1"/>
+                            <constraint firstItem="ckt-OS-hGr" firstAttribute="leading" secondItem="xqW-4n-Vb1" secondAttribute="trailing" constant="10" id="HxF-H1-0Kk"/>
+                            <constraint firstAttribute="bottom" secondItem="xqW-4n-Vb1" secondAttribute="bottom" id="PGd-g5-Vw5"/>
+                            <constraint firstItem="wA4-Hg-osf" firstAttribute="top" secondItem="ckt-OS-hGr" secondAttribute="bottom" constant="5" id="WoE-MC-z3K"/>
+                            <constraint firstItem="xqW-4n-Vb1" firstAttribute="top" secondItem="bcT-Rs-uWi" secondAttribute="top" id="cFk-ak-Abh"/>
+                            <constraint firstItem="0IW-Ou-AoX" firstAttribute="centerY" secondItem="bcT-Rs-uWi" secondAttribute="centerY" id="cHs-M3-bS6"/>
+                            <constraint firstItem="xqW-4n-Vb1" firstAttribute="leading" secondItem="bcT-Rs-uWi" secondAttribute="leading" id="usZ-HE-TBX"/>
+                            <constraint firstItem="ckt-OS-hGr" firstAttribute="top" secondItem="bcT-Rs-uWi" secondAttribute="top" constant="10" id="y9b-QA-Lyd"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="bcT-Rs-uWi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="0Co-Q2-Amh"/>
+                    <constraint firstAttribute="bottom" secondItem="bcT-Rs-uWi" secondAttribute="bottom" constant="5" id="d55-Bz-VFS"/>
+                    <constraint firstItem="bcT-Rs-uWi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="dd6-qV-QHf"/>
+                    <constraint firstAttribute="trailing" secondItem="bcT-Rs-uWi" secondAttribute="trailing" id="t2R-of-Hxf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="imgCheck" destination="0IW-Ou-AoX" id="kdX-Tk-Jzo"/>
+            </connections>
+            <point key="canvasLocation" x="135.1145038167939" y="20.070422535211268"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_uncheck" width="16" height="16"/>
+        <image name="userImg" width="44" height="44"/>
+        <namedColor name="AppTitleColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ThemeColor">
+            <color red="0.45899999141693115" green="0.35699999332427979" blue="0.94099998474121094" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

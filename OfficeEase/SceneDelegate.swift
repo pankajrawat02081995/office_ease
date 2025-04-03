@@ -13,11 +13,50 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+                
+                window = UIWindow(windowScene: windowScene)
+                
+                let rootVC = decideRootViewController() // Choose initial screen
+                let navigationController = UINavigationController(rootViewController: rootVC)
+                
+                window?.rootViewController = navigationController
+                window?.makeKeyAndVisible()
     }
+    
+    // MARK: - Decide Root View Controller
+        private func decideRootViewController() -> UIViewController {
+            if isUserLoggedIn() {
+                return SignInVC() // User is logged in, go to Home
+            } else {
+                return SignInVC() // User is not logged in, go to Login
+            }
+        }
+    func switchToHomeScreen() {
+        let homeVC = SignInVC()
+        let navController = UINavigationController(rootViewController: homeVC)
+
+        guard let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate else { return }
+        
+        sceneDelegate.window?.rootViewController = navController
+    }
+    
+    
+    func switchToLoginScreen() {
+        let loginVC = SignInVC()
+        let navController = UINavigationController(rootViewController: loginVC)
+
+        guard let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate else { return }
+        
+        sceneDelegate.window?.rootViewController = navController
+    }
+
+
+
+        // MARK: - User Authentication Check (Mocked)
+        private func isUserLoggedIn() -> Bool {
+            return UserDefaults.standard.bool(forKey: "isLoggedIn") // Example using UserDefaults
+        }
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
