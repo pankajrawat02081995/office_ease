@@ -14,7 +14,18 @@ class CustomAlertVC: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+   
+    
     @IBAction func nextOnPress(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func createOnPress(_ sender: UIButton) {
+        let vc = CreateCategoryVC.instantiate()
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .overFullScreen
+        self.present(vc, animated: true)
     }
     
 }

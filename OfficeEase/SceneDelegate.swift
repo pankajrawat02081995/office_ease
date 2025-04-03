@@ -12,7 +12,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        setupGlobalNavigationBar()
+//        setupGlobalNavigationBar()
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         let rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "SignInVC") as! SignInVC // Replace with your initial view controller

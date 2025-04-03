@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zhu-N7-M85">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -1079,7 +1079,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="nextOnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qho-jU-0gk"/>
+                                                            <action selector="createOnPress:" destination="N0O-eh-gfS" eventType="touchUpInside" id="TZd-Xc-52C"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -1095,8 +1095,8 @@
                                                     <constraint firstItem="TjN-27-O2c" firstAttribute="top" secondItem="W3x-vx-Glu" secondAttribute="bottom" constant="10" id="kmg-FG-zP8"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBv-Zd-LxD">
-                                                <rect key="frame" x="0.0" y="0.0" width="353" height="534.66666666666663"/>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBv-Zd-LxD">
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="604.66666666666663"/>
                                                 <subviews>
                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9RF-e0-5wg" customClass="AnimatableButton" customModule="IBAnimatable">
                                                         <rect key="frame" x="233" y="19.333333333333314" width="100" height="30"/>
@@ -1116,7 +1116,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="nextOnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fKj-ZM-AEe"/>
+                                                            <action selector="createOnPress:" destination="N0O-eh-gfS" eventType="touchUpInside" id="ebZ-YV-HUz"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92s-xA-qvE">
@@ -1126,7 +1126,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Vka-fR-Had">
-                                                        <rect key="frame" x="20" y="68.666666666666629" width="313" height="456"/>
+                                                        <rect key="frame" x="20" y="68.666666666666629" width="313" height="526"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="82q-c0-gFc">
                                                             <size key="itemSize" width="128" height="128"/>
@@ -1149,8 +1149,8 @@
                                                     <constraint firstAttribute="bottom" secondItem="Vka-fR-Had" secondAttribute="bottom" constant="10" id="Xwy-ve-yaX"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hfx-75-VBb" customClass="AnimatableButton" customModule="IBAnimatable">
-                                                <rect key="frame" x="0.0" y="554.66666666666663" width="353" height="50"/>
+                                            <button hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hfx-75-VBb" customClass="AnimatableButton" customModule="IBAnimatable">
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="50"/>
                                                 <color key="backgroundColor" name="ThemeColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="hBz-W4-YN4"/>
@@ -1207,6 +1207,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnNext" destination="Hfx-75-VBb" id="qwY-Un-Zug"/>
                         <outlet property="categoryContainerView" destination="nBv-Zd-LxD" id="l7W-10-qEd"/>
                         <outlet property="collectionView" destination="Vka-fR-Had" id="8ue-UM-PjU"/>
                         <outlet property="createCategoryView" destination="pEf-tF-bBl" id="ikm-ve-wOz"/>
@@ -1240,8 +1241,8 @@
                                 <color key="textColor" name="AppWhiteColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let’s tackle your to do list" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eso-Eq-Ryd">
-                                <rect key="frame" x="20" y="111.66666666666667" width="166" height="17.000000000000014"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don’t miss your clock in schedule" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eso-Eq-Ryd">
+                                <rect key="frame" x="19.999999999999986" y="111.66666666666667" width="217.66666666666663" height="17.000000000000014"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
                                 <color key="textColor" red="0.85098039219999999" green="0.83921568629999999" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1287,7 +1288,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="nextOnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="grX-kT-d2s"/>
+                                                            <action selector="createOnPress:" destination="UTo-k2-d5d" eventType="touchUpInside" id="kF5-bW-xqq"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -1304,7 +1305,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1GP-2Y-geh">
-                                                <rect key="frame" x="0.0" y="0.0" width="353" height="535.33333333333337"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="605.33333333333337"/>
                                                 <subviews>
                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKR-bK-wWj" customClass="AnimatableButton" customModule="IBAnimatable">
                                                         <rect key="frame" x="233" y="19.333333333333343" width="100" height="30"/>
@@ -1334,7 +1335,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aPY-M7-3Ye">
-                                                        <rect key="frame" x="20" y="68.666666666666657" width="313" height="456.66666666666674"/>
+                                                        <rect key="frame" x="20" y="68.666666666666686" width="313" height="526.66666666666652"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5aE-Md-UUc">
                                                             <size key="itemSize" width="128" height="128"/>
@@ -1357,8 +1358,8 @@
                                                     <constraint firstItem="aPY-M7-3Ye" firstAttribute="top" secondItem="Jpi-xx-cQo" secondAttribute="bottom" constant="20" id="u0s-2B-ioh"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JS2-ih-aCc" customClass="AnimatableButton" customModule="IBAnimatable">
-                                                <rect key="frame" x="0.0" y="555.33333333333337" width="353" height="50"/>
+                                            <button hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JS2-ih-aCc" customClass="AnimatableButton" customModule="IBAnimatable">
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="50"/>
                                                 <color key="backgroundColor" name="ThemeColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="sP9-P9-Yvg"/>
@@ -1374,6 +1375,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="createOnPress:" destination="UTo-k2-d5d" eventType="touchUpInside" id="CnU-Q6-06X"/>
                                                     <action selector="nextOnPress:" destination="UTo-k2-d5d" eventType="touchUpInside" id="K8k-JG-td3"/>
                                                 </connections>
                                             </button>
@@ -1418,6 +1420,149 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PHw-WI-Gx4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3564" y="-2"/>
+        </scene>
+        <!--Create CategoryVC-->
+        <scene sceneID="Mlg-sF-La1">
+            <objects>
+                <viewController storyboardIdentifier="CreateCategoryVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zhu-N7-M85" customClass="CreateCategoryVC" customModule="OfficeEase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="coU-hb-fsL">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4e-0Z-BEN">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="backgoundButtontap:" destination="zhu-N7-M85" eventType="touchUpInside" id="P8U-7G-pvn"/>
+                                </connections>
+                            </button>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c3m-uR-6gJ" customClass="AnimatableView" customModule="IBAnimatable">
+                                <rect key="frame" x="20" y="316.66666666666669" width="353" height="218.66666666666669"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Alert" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHD-Xl-H90">
+                                        <rect key="frame" x="122" y="30" width="109" height="28.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
+                                        <color key="textColor" name="AppTitleColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ouV-d3-HvH">
+                                        <rect key="frame" x="20" y="78.666666666666629" width="313" height="50"/>
+                                        <subviews>
+                                            <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4I7-1h-9Eu" customClass="AnimatableView" customModule="IBAnimatable">
+                                                <rect key="frame" x="0.0" y="0.0" width="313" height="120"/>
+                                                <subviews>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lDD-0r-ssj" customClass="AnimatableTextView" customModule="IBAnimatable">
+                                                        <rect key="frame" x="10" y="10" width="293" height="100"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="100" id="SFX-G6-wbL"/>
+                                                        </constraints>
+                                                        <color key="textColor" name="AppTitleColor"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="enter here..."/>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                <color key="value" name="AppSubTitleColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="lDD-0r-ssj" firstAttribute="top" secondItem="4I7-1h-9Eu" secondAttribute="top" constant="10" id="hJU-Vo-G6d"/>
+                                                    <constraint firstAttribute="trailing" secondItem="lDD-0r-ssj" secondAttribute="trailing" constant="10" id="qDh-pM-mhi"/>
+                                                    <constraint firstItem="lDD-0r-ssj" firstAttribute="leading" secondItem="4I7-1h-9Eu" secondAttribute="leading" constant="10" id="txx-hs-kxN"/>
+                                                    <constraint firstAttribute="bottom" secondItem="lDD-0r-ssj" secondAttribute="bottom" constant="10" id="znQ-ZW-Ob9"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" name="AppBorderColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter here..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bd6-ko-Nda">
+                                                <rect key="frame" x="0.0" y="0.0" width="313" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Ac2-fV-t9j"/>
+                                                </constraints>
+                                                <color key="textColor" name="AppTitleColor"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Aq-43-3dh" customClass="AnimatableButton" customModule="IBAnimatable">
+                                        <rect key="frame" x="101.66666666666669" y="148.66666666666663" width="150" height="50"/>
+                                        <color key="backgroundColor" name="ThemeColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="XSO-c8-A4c"/>
+                                            <constraint firstAttribute="width" constant="150" id="caf-l4-DBg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" name="AppWhiteColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="nextOnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cqM-i5-2jg"/>
+                                            <action selector="saveOnPress:" destination="zhu-N7-M85" eventType="touchUpInside" id="m5R-ef-PVB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="qHD-Xl-H90" firstAttribute="centerX" secondItem="c3m-uR-6gJ" secondAttribute="centerX" id="1Sq-aX-c5D"/>
+                                    <constraint firstItem="qHD-Xl-H90" firstAttribute="top" secondItem="c3m-uR-6gJ" secondAttribute="top" constant="30" id="AZo-Ev-U5y"/>
+                                    <constraint firstItem="4Aq-43-3dh" firstAttribute="top" secondItem="ouV-d3-HvH" secondAttribute="bottom" constant="20" id="QIV-EZ-fOE"/>
+                                    <constraint firstItem="ouV-d3-HvH" firstAttribute="top" secondItem="qHD-Xl-H90" secondAttribute="bottom" constant="20" id="QJB-G0-rAw"/>
+                                    <constraint firstAttribute="trailing" secondItem="ouV-d3-HvH" secondAttribute="trailing" constant="20" id="RQu-uh-tB1"/>
+                                    <constraint firstItem="ouV-d3-HvH" firstAttribute="leading" secondItem="c3m-uR-6gJ" secondAttribute="leading" constant="20" id="fl2-GV-QZQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="4Aq-43-3dh" secondAttribute="bottom" constant="20" id="lr2-na-MdA"/>
+                                    <constraint firstItem="4Aq-43-3dh" firstAttribute="centerX" secondItem="c3m-uR-6gJ" secondAttribute="centerX" id="r0g-nv-06X"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qvX-3z-j0z"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="m4e-0Z-BEN" firstAttribute="leading" secondItem="qvX-3z-j0z" secondAttribute="leading" id="ViB-z2-idM"/>
+                            <constraint firstItem="qvX-3z-j0z" firstAttribute="trailing" secondItem="c3m-uR-6gJ" secondAttribute="trailing" constant="20" id="dip-b3-JdZ"/>
+                            <constraint firstItem="c3m-uR-6gJ" firstAttribute="centerX" secondItem="coU-hb-fsL" secondAttribute="centerX" id="hEj-Td-cct"/>
+                            <constraint firstAttribute="bottom" secondItem="m4e-0Z-BEN" secondAttribute="bottom" id="iYO-fJ-iAG"/>
+                            <constraint firstItem="m4e-0Z-BEN" firstAttribute="top" secondItem="coU-hb-fsL" secondAttribute="top" id="mWF-Ao-7vS"/>
+                            <constraint firstItem="c3m-uR-6gJ" firstAttribute="leading" secondItem="qvX-3z-j0z" secondAttribute="leading" constant="20" id="nEf-Aa-dW6"/>
+                            <constraint firstItem="c3m-uR-6gJ" firstAttribute="centerY" secondItem="coU-hb-fsL" secondAttribute="centerY" id="pBW-f5-CNY"/>
+                            <constraint firstItem="qvX-3z-j0z" firstAttribute="trailing" secondItem="m4e-0Z-BEN" secondAttribute="trailing" id="u4v-3c-Vst"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblTitle" destination="qHD-Xl-H90" id="Z21-Kt-Cad"/>
+                        <outlet property="textView" destination="lDD-0r-ssj" id="hai-dW-CDT"/>
+                        <outlet property="txtField" destination="bd6-ko-Nda" id="FGB-a9-OMJ"/>
+                        <outlet property="txtViewContainer" destination="4I7-1h-9Eu" id="KER-X4-4Xr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PLI-hz-iUE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4295.419847328244" y="-2.1126760563380285"/>
         </scene>
         <!--Staff ListVC-->
         <scene sceneID="b0d-An-3J5">
@@ -1505,7 +1650,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tU7-jV-w4M">
-                                                <rect key="frame" x="0.0" y="0.0" width="353" height="535.33333333333337"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="605.33333333333337"/>
                                                 <subviews>
                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DuQ-V8-6dz" customClass="AnimatableButton" customModule="IBAnimatable">
                                                         <rect key="frame" x="233" y="19.333333333333343" width="100" height="30"/>
@@ -1535,7 +1680,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fOk-GP-H1W">
-                                                        <rect key="frame" x="20" y="69.333333333333371" width="313" height="466"/>
+                                                        <rect key="frame" x="20" y="69.333333333333371" width="313" height="536"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </tableView>
                                                 </subviews>
@@ -1551,8 +1696,8 @@
                                                     <constraint firstAttribute="trailing" secondItem="fOk-GP-H1W" secondAttribute="trailing" constant="20" id="tRo-x1-yLc"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ac5-fG-LL1" customClass="AnimatableButton" customModule="IBAnimatable">
-                                                <rect key="frame" x="0.0" y="555.33333333333337" width="353" height="50"/>
+                                            <button hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ac5-fG-LL1" customClass="AnimatableButton" customModule="IBAnimatable">
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="50"/>
                                                 <color key="backgroundColor" name="ThemeColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="yJm-9Z-9E8"/>
