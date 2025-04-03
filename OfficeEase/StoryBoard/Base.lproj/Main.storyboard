@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZiT-cN-brH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -369,7 +369,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="nextOnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OzD-sM-E7J"/>
+                                                            <action selector="nextOnPress:" destination="wHe-5U-Cb2" eventType="touchUpInside" id="bq9-SQ-QFa"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -443,7 +443,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="skipOnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BHs-6x-JSx"/>
+                                                            <action selector="emailButtonOnClick:" destination="wHe-5U-Cb2" eventType="touchUpInside" id="DVd-m8-85k"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -481,7 +481,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="skipOnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N6Q-Yp-Z6R"/>
+                                                            <action selector="userNameButtonOnClick:" destination="wHe-5U-Cb2" eventType="touchUpInside" id="YD8-CS-aAg"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -518,7 +518,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="skipOnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dM0-RW-HXM"/>
+                                                            <action selector="phoneButtonOnClick:" destination="wHe-5U-Cb2" eventType="touchUpInside" id="27n-jV-1U2"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -572,6 +572,15 @@
                             <constraint firstItem="Oy0-eO-9uR" firstAttribute="bottom" secondItem="g0g-pn-qS6" secondAttribute="bottom" id="t23-fS-hBe"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailButtonContainer" destination="fKc-jz-Kw7" id="xMK-XS-d5D"/>
+                        <outlet property="emailTextFieldContainer" destination="VGW-Nq-7tZ" id="8Hh-F5-BCw"/>
+                        <outlet property="phoneButtonContainer" destination="MRV-RS-3MX" id="KVa-QA-Pk5"/>
+                        <outlet property="phoneNumberTextFieldContainer" destination="iRI-HX-k8r" id="8Td-jN-FeL"/>
+                        <outlet property="txtEmail" destination="zY7-OW-I3Z" id="2zY-10-wkt"/>
+                        <outlet property="userNameButtonContainer" destination="U4C-FH-WFR" id="4w2-Lj-yXw"/>
+                        <outlet property="userNameTextFieldContainer" destination="RwU-4h-0mi" id="86Z-77-LIQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N5I-X5-oqW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1157,7 +1166,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="nextOnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gkb-JQ-luV"/>
+                                                    <action selector="nextOnPress:" destination="N0O-eh-gfS" eventType="touchUpInside" id="5mw-tL-aO7"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1207,10 +1216,10 @@
             </objects>
             <point key="canvasLocation" x="2201" y="-2"/>
         </scene>
-        <!--View Controller-->
+        <!--Custom AlertVC-->
         <scene sceneID="VOS-ZH-K6Z">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="UTo-k2-d5d" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CustomAlertVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UTo-k2-d5d" customClass="CustomAlertVC" customModule="OfficeEase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tmz-D8-ZvW">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1365,7 +1374,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="nextOnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6HC-JJ-9Bz"/>
+                                                    <action selector="nextOnPress:" destination="UTo-k2-d5d" eventType="touchUpInside" id="K8k-JG-td3"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1559,7 +1568,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="nextOnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k5a-J2-dN1"/>
+                                                    <action selector="nextOnPress:" destination="ZiT-cN-brH" eventType="touchUpInside" id="qQX-4O-GZa"/>
                                                 </connections>
                                             </button>
                                         </subviews>

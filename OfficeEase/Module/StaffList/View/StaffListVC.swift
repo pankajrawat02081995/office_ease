@@ -8,7 +8,7 @@
 import UIKit
 
 // MARK: - ViewController
-class StaffListVC: BaseVC {
+class StaffListVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -16,7 +16,6 @@ class StaffListVC: BaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupNavigationBar()
         setupTableView()
     }
     
@@ -27,6 +26,9 @@ class StaffListVC: BaseVC {
         tableView.registerNib(nib: StaffListXIB.identifier)
     }
     
+    @IBAction func nextOnPress(_ sender: UIButton) {
+        pushViewController(ofType: CustomAlertVC.self, fromStoryboard: .main)
+    }
 }
 
 // MARK: - TableView Delegate

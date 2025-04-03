@@ -16,28 +16,40 @@ class BaseVC: UIViewController {
     
     // MARK: - Navigation Bar Setup
     func setupNavigationBar() {
-        navigationController?.navigationBar.prefersLargeTitles = true
+        guard let navigationController = navigationController else {
+            print("⚠️ Warning: This view controller is not inside a navigation controller.")
+            return
+        }
+        
+        navigationController.navigationBar.prefersLargeTitles = true
         navigationItem.largeTitleDisplayMode = .automatic
-        navigationController?.navigationBar.tintColor = .systemBlue // Customize color
+        navigationController.navigationBar.tintColor = .systemBlue // Customize color
         
         // Back button setup (only if not the root VC)
-        if navigationController?.viewControllers.count ?? 0 > 1 {
+        if navigationController.viewControllers.count > 1 {
             setupBackButton()
         }
     }
     
     // MARK: - Back Button Configuration
     private func setupBackButton() {
-        let backButton = UIBarButtonItem(image: UIImage(systemName: "chevron.left"),
+        guard let backImage = UIImage(named: "ic_back")?.withRenderingMode(.alwaysOriginal) else {
+            print("❌ Error: 'ic_back' image not found!")
+            return
+        }
+        
+        let backButton = UIBarButtonItem(image: backImage,
                                          style: .plain,
                                          target: self,
                                          action: #selector(backButtonTapped))
         navigationItem.leftBarButtonItem = backButton
     }
     
+    // MARK: - Back Button Action
     @objc private func backButtonTapped() {
         navigationController?.popViewController(animated: true)
     }
+    
     
     // MARK: - Set Title (Common Method)
     func setNavigationTitle(_ title: String) {

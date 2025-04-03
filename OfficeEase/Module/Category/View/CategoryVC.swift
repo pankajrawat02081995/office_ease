@@ -8,6 +8,8 @@ class CategoryVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        self.setupNavigationBar()
         setupCollectionView()
     }
     
@@ -43,6 +45,11 @@ class CategoryVC: UIViewController {
         
         return section
     }
+    
+    @IBAction func nextOnPress(_ sender: UIButton) {
+        pushViewController(ofType: StaffListVC.self, fromStoryboard: .main)
+    }
+    
 }
 
 extension CategoryVC: UICollectionViewDataSource {
