@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     }
     
     private func setupCollectionView() {
+        // Ensure the collection view is registered and the layout is correctly set up
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 0
@@ -33,7 +34,7 @@ class ViewController: UIViewController {
         
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(WelcomeXIB.self, forCellWithReuseIdentifier: WelcomeXIB.identifier)
+        collectionView.register(UINib(nibName: "WelcomeXIB", bundle: nil), forCellWithReuseIdentifier: WelcomeXIB.identifier)
     }
     
     private func setupPageControl() {
@@ -44,10 +45,20 @@ class ViewController: UIViewController {
     }
     
     @IBAction func nextOnPress(_ sender: UIButton) {
+        let currentPage = pageControl.currentPage
+        let nextPage = currentPage + 1
+        if nextPage < totalPages {
+            pageControl.currentPage = nextPage
+            let indexPath = IndexPath(item: nextPage, section: 0)
+            collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        }
     }
     
     @IBAction func skipOnPress(_ sender: UIButton) {
+        self.pushViewController(ofType: SignInVC.self, fromStoryboard: .main)
     }
+    
+    
 }
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -60,6 +71,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: WelcomeXIB.identifier, for: indexPath) as? WelcomeXIB else {
             return UICollectionViewCell()
         }
+        // Configure cell (if needed, you can pass data to your cell here)
         return cell
     }
     

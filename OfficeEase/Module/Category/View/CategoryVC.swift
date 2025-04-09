@@ -14,8 +14,33 @@ class CategoryVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.setupNavigationBar()
+//        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        // Setup custom navigation bar with images and callbacks
+        setupCustomNavigationBar(
+            leftImage: UIImage(named: "userImg"), // Left button image
+            leftAction: { [weak self] in
+                self?.handleLeftButtonAction()
+            },
+            rightImage: UIImage(named: "userImg"), // Right button image
+            rightAction: { [weak self] in
+                self?.handleRightButtonAction()
+            }
+        )
+        
+        
         setupCollectionView()
+    }
+    
+    // Left button callback
+    private func handleLeftButtonAction() {
+        print("Left button tapped")
+        // Handle left button action
+    }
+    
+    // Right button callback
+    private func handleRightButtonAction() {
+        print("Right button tapped")
+        // Handle right button action
     }
     
     private func setupCollectionView() {

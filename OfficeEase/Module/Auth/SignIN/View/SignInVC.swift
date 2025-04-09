@@ -26,6 +26,11 @@ class SignInVC: UIViewController {
         setupLoginWithEmail()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
     @IBAction func emailButtonOnClick(_ sender: UIButton) {
         setupLoginWithEmail()
     }
@@ -76,4 +81,9 @@ class SignInVC: UIViewController {
 //        }
         self.pushViewController(ofType: CategoryVC.self, fromStoryboard: .main)
     }
+    
+    @IBAction func signupOnPress(_ sender: UIButton) {
+        self.pushViewController(ofType: SignUpVC.self, fromStoryboard: .main)
+    }
+    
 }

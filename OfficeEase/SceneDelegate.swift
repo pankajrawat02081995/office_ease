@@ -15,7 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        setupGlobalNavigationBar()
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        let rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "SignInVC") as! SignInVC // Replace with your initial view controller
+        let rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "ViewController") as! ViewController // Replace with your initial view controller
         
         window.rootViewController = UINavigationController(rootViewController: rootViewController)
         window.makeKeyAndVisible()
