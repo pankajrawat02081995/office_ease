@@ -218,6 +218,7 @@
 				DEVELOPMENT_TEAM = N8W4523M6Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OfficeEase/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BuzzPro;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -229,7 +230,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.office.ease.app.OfficeEase;
+				PRODUCT_BUNDLE_IDENTIFIER = com.buzzpro.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -252,6 +253,7 @@
 				DEVELOPMENT_TEAM = N8W4523M6Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OfficeEase/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BuzzPro;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -263,7 +265,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.office.ease.app.OfficeEase;
+				PRODUCT_BUNDLE_IDENTIFIER = com.buzzpro.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

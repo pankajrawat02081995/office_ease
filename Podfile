@@ -4,9 +4,14 @@
 target 'OfficeEase' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-
+  
   # Pods for OfficeEase
-
-   pod 'IBAnimatable'
-
+  
+  pod 'IBAnimatable'
+  # Add the Firebase pod for Google Analytics
+  pod 'FirebaseAnalytics'
+  
+  pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
+  
 end
