@@ -1,0 +1,113 @@
+//
+//  LoginModel.swift
+//  Broker Portal
+//
+//  Created by Pankaj on 23/04/25.
+//
+
+import Foundation
+
+struct LoginModel: Codable {
+    let status: Int?
+    var accessToken: String?
+    var refreshToken: String?
+    let user: String?
+    let agency: String?
+    let additionalAccess: String?
+    let message: String?
+    let accountLocked: Int?
+    
+    
+    enum CodingKeys: String, CodingKey {
+        case status
+        case accessToken = "access_token"
+        case refreshToken = "refresh_token"
+        case user
+        case agency
+        case message
+        case accountLocked = "account_locked"
+        case additionalAccess = "additional_access"
+    }
+    
+   
+}
+
+
+struct ApplicationProfile: Codable {
+    let trucking: Bool
+    let propertyCasuality: Bool
+    
+    enum CodingKeys: String, CodingKey {
+        case trucking
+        case propertyCasuality = "property_casuality"
+    }
+}
+
+struct UserModel: Codable {
+    let userId: Int?
+    let usertype: String?
+    let userTypeId: Int?
+    let firstName: String?
+    let lastName: String?
+    let address: String?
+    let city: String?
+    let state: String?
+    let zipcode: String?
+    let contactNumberOffice: String?
+    let contactNumberMobile: String?
+    let email: String?
+    let isAllowedToChat: String?
+    let agencyId: Int?
+    let userStatus: String?
+    let additionalAccess: [AdditionalAccess]?
+    let ticketProfile: [TicketProfile]?
+    let applicationProfile: ApplicationProfile
+    
+    enum CodingKeys: String, CodingKey {
+        case userId = "user_id"
+        case usertype
+        case userTypeId = "user_type_id"
+        case firstName = "first_name"
+        case lastName = "last_name"
+        case address, city, state, zipcode
+        case contactNumberOffice = "contact_number_office"
+        case contactNumberMobile = "contact_number_mobile"
+        case email
+        case isAllowedToChat = "is_allowed_to_chat"
+        case agencyId = "agency_id"
+        case userStatus = "user_status"
+        case additionalAccess = "additional_access"
+        case ticketProfile = "ticket_profile"
+        case applicationProfile = "application_profile"
+    }
+}
+
+struct AdditionalAccess: Codable {
+    let type: String
+    let selected: Bool
+    let permissions: Permissions
+}
+
+struct Permissions: Codable {
+    let view: Bool
+    let add: Bool
+    let edit: Bool
+    
+    enum CodingKeys: String, CodingKey {
+        case view = "VIEW"
+        case add = "ADD"
+        case edit = "EDIT"
+    }
+}
+
+struct TicketProfile: Codable {
+    let roleKey: String
+    let roleDescription: String
+    let access: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case roleKey = "role_key"
+        case roleDescription = "role_description"
+        case access
+    }
+}
